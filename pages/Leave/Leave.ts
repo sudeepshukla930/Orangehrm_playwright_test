@@ -1,11 +1,17 @@
+// Importing the necessary modules and types
+
 import { expect, type Locator, type Page } from '@playwright/test';
 
+/**
+ * Class representing the LeavePage Page actions
+ */
 
 exports.LeavePage = class LeavePage {
 
+    // Declaring class properties
+
     readonly page: Page;
     readonly navBarLocator:Locator;
-    //readonly assertNavBarElement:Locator;
     readonly fromDateLocator:Locator;
     readonly ToDateLocator:Locator;
     readonly selectDropdownListLocator:Locator;
@@ -15,10 +21,15 @@ exports.LeavePage = class LeavePage {
 
     private buttonLocator: Locator;
 
+
+    /**
+     * Constructor initializing the locators
+     * @param page A Playwright Page instance
+     */
+
     constructor(page: Page){
         this.page = page;
         this.navBarLocator = page.getByRole("navigation");
-        //this.assertNavBarElement =  page.locator('h6');
         this.fromDateLocator = page.getByPlaceholder("yyyy-dd-mm").nth(0);
         this.ToDateLocator = page.getByPlaceholder("yyyy-dd-mm").nth(1);
         this.selectDropdown = page.locator('.oxd-select-text--after > .oxd-icon');
@@ -31,6 +42,8 @@ exports.LeavePage = class LeavePage {
 
     }
     
+        // Methods for interacting with the  Page
+
 
     private updateButtonLocator(buttonValue: string): void {
         this.buttonLocator = this.page.getByRole('button',{name:buttonValue});
@@ -40,7 +53,7 @@ exports.LeavePage = class LeavePage {
         
         await this.navBarLocator.getByText(navName).click();
         // await expect(await this.assertNavBarElement.innerText()).toContain(navName);
-        await this.page.waitForTimeout(9000);
+        
     }
 
     async selectDate(fromDate:string , toDate:string){

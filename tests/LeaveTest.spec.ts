@@ -113,9 +113,10 @@ test.describe('Leave Section ', () => {
   });
 
 
+// Test  of Add Entitlements
 
   test(`Test  of Add Entitlements`, async ({page}) => {
-    // Test code goes here
+    
         let leave = new LeavePage(page);
         let leaveList = new LeaveListPage(page);
         let assignLeave = new AssignLeavePage(page);
@@ -137,7 +138,7 @@ test.describe('Leave Section ', () => {
         
         await leave.buttonClick('Save');
         
-        await page.waitForTimeout(9000);
+        
 
 
   });

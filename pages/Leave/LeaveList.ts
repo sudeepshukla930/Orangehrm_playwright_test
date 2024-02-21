@@ -1,7 +1,14 @@
+// Importing the necessary modules and types
+
 import { expect, type Locator, type Page } from '@playwright/test';
 
+/**
+ * Class representing the Leave List page actions
+ */
 
 exports.LeaveListPage = class LeaveListPage {
+     
+    // Declaring class properties
 
     readonly page: Page;
     readonly inputFieldLocator:Locator;
@@ -9,6 +16,12 @@ exports.LeaveListPage = class LeaveListPage {
     readonly selectFromDropdownLocator : Locator;
     readonly subTypeLocator : Locator;
     readonly pastEmployeeLocator : Locator;
+    
+    
+    /**
+     * Constructor initializing the locators
+     * @param page A Playwright Page instance
+     */
 
 
     constructor(page: Page){
@@ -24,6 +37,10 @@ exports.LeaveListPage = class LeaveListPage {
 
     }
     
+
+
+    // Methods for interacting with the  Page
+
 
     async EnterName(name:string){
         await this.inputFieldLocator.fill(name);
