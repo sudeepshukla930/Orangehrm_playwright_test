@@ -1,0 +1,41 @@
+{
+    "base":{
+        "url" :"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+        "username":"Admin",
+        "password":"admin123"
+    },
+
+    "navigationText":[
+        "Admin",
+        "PIM",
+        "Leave",
+        "Time",
+        "Recruitment",
+        "My Info",
+        "Performance",
+        "Directory",
+        "Buzz"
+
+    ],
+
+    "date1":[
+        {
+            "departure":"02-02-2022",
+            "arrival" : "02-03-2022"
+        },
+        {
+            "departure":"01-02-2022",
+            "arrival" : "01-03-2022"
+        }
+    ],
+    "date2":[
+        {
+            "departure":"02-02-2022",
+            "arrival" : "02-03-2022"
+        },
+        {
+            "departure":"01-02-2022",
+            "arrival" : "01-03-2022"
+        }
+    ]
+}
